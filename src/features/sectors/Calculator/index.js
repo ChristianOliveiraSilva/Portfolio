@@ -3,6 +3,7 @@ import React from 'react';
 import ItensSelectionComponent from "./ItensSelectionComponent";
 import SpecificSolution from "./SpecificSolution";
 import ProjectDescription from "./ProjectDescription";
+import TotalSolution from "./TotalSolution";
 
 class Calculator extends React.Component {
 
@@ -17,7 +18,10 @@ class Calculator extends React.Component {
       SpecificSolution,
       ItensSelectionComponent,
       ProjectDescription,
+      TotalSolution,
     ]
+
+    this.hourValue = 35
 
     this.renderCurrentComponent = this.renderCurrentComponent.bind(this)
     this.setPhase = this.setPhase.bind(this)
@@ -51,11 +55,11 @@ class Calculator extends React.Component {
   }
 
   renderCurrentComponent () {
-    console.log(this.state.total);
     if (this.components[this.state.phase]) {
       const Comp = this.components[this.state.phase]
       const props = {
         total: this.state.total,
+        hourValue: this.hourValue,
         addPhase: this.addPhase,
         setPhase: this.setPhase,
         addTotal: this.addTotal,
