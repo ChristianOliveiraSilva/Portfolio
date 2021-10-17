@@ -15,8 +15,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-weight: 700;
+  font-weight: bold;
 }
+
+/* class */
 
 hr.divider{
   display: block;
@@ -26,7 +28,21 @@ hr.divider{
   margin: 35px auto;
 }
 
-/* class */
+.svg-icon-wave {
+  width: 100%;
+  max-height: 200px;
+  color: var(--bs-blue);
+}
+
+.svg-icon-wave.transform {
+  transform: rotate(180deg)
+}
+
+.error {
+  color: red;
+}
+
+/* component */
 
 footer {
   background-color: var(--bs-blue);
